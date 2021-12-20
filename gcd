@@ -1,0 +1,22 @@
+#include<stdio.h>
+int GCD(int m,int n)
+{
+    while(m!=n)
+    if(m>n)
+    {
+       return GCD(m-n,n);
+    }
+    else 
+    {
+        return GCD(m,n-m);
+    }
+}
+int main()
+{
+    int m,n,res;
+    printf("enter the no:");
+    scanf("%d %d",&m,&n);
+    res=GCD(m,n);
+    printf("result=%d",res);
+    return 0;
+}
